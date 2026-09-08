@@ -34,7 +34,7 @@ Pebble Index 01  ──(multipart/form-data)──▶  Cloudflare Worker  ──
 
 ```bash
 git clone <your-repo-url>
-cd pebble-proxy
+cd pebble-webhook-proxy-for-notion-ai
 npm install
 ```
 
@@ -196,8 +196,8 @@ npx wrangler deploy
 The output prints your live URL:
 
 ```
-Deployed pebble-proxy
-  https://pebble-proxy.<your-subdomain>.workers.dev
+Deployed pebble-webhook-proxy-for-notion-ai
+  https://pebble-webhook-proxy-for-notion-ai.<your-subdomain>.workers.dev
 ```
 
 If you missed it:
@@ -209,7 +209,7 @@ npx wrangler deployments list
 Verify the live Worker (real URL, not localhost):
 
 ```bash
-curl -X POST "https://pebble-proxy.<your-subdomain>.workers.dev/38cfaab65b10d1231bfd5ee176bcfbdb" -F "client=ring" -F "recordedAt=1788904222506" -F "transcription=deploy test"
+curl -X POST "https://pebble-webhook-proxy-for-notion-ai.<your-subdomain>.workers.dev/38cfaab65b10d1231bfd5ee176bcfbdb" -F "client=ring" -F "recordedAt=1788904222506" -F "transcription=deploy test"
 ```
 
 Expected: `ok`
@@ -221,7 +221,7 @@ Expected: `ok`
 Set the Pebble's webhook URL to your deployed base URL **plus the inbound secret as the path**:
 
 ```
-https://pebble-proxy.<your-subdomain>.workers.dev/38cfaab65b10d1231bfd5ee176bcfbdb
+https://pebble-webhook-proxy-for-notion-ai.<your-subdomain>.workers.dev/38cfaab65b10d1231bfd5ee176bcfbdb
 ```
 
 Trigger a real recording, then confirm it flows through with `npx wrangler tail`.
