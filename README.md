@@ -22,7 +22,7 @@ Pebble Index 01  ──(multipart/form-data)──▶  Cloudflare Worker  ──
 
 - **Node.js 18+**
 - A **Cloudflare account** (free tier is fine)
-- A **Notion integration token** (`ntn_...`) — from <https://www.notion.so/my-integrations>
+- A **Notion integration token** (`ntn_...`) — from <https://www.notion.com/my-integrations>
 - A **Notion agent ID** — use `notion_ai` for Notion AI, or a specific agent's UUID
 - A **Pebble Index 01** with a configurable webhook URL
 
